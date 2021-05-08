@@ -1,0 +1,1089 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{amssymb,amsmath,amsthm}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newtheorem*{theorem}{Theorem}
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{1}x^{x^{1+x^{1+x^{1+x^{1+x^{\iddots}}}}}}\,dx=\log2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x)\coloneqq x^{x^{1+x^{1+x^{1+x^{1+x^{\iddots}}}}}}=x^{xx^{x^{1+x^{1+x^{1+x^{\iddots}}}}}}=x^{xx^{xx^{x^{1+x^{1+x^{\iddots}}}}}}=\dotsb=x^{xx^{xx^{xx^{xx^{xx^{\iddots}}}}}}=\left(x^{x}\right)^{x^{xx^{xx^{xx^{xx^{\iddots}}}}}}=\left(x^{x}\right)^{\left(x^{x}\right)^{x^{xx^{xx^{xx^{\iddots}}}}}}=\dotsb=\left(x^{x}\right)^{\left(x^{x}\right)^{\left(x^{x}\right)^{\left(x^{x}\right)^{\left(x^{x}\right)^{\iddots}}}}}=\left(x^{x}\right)^{f(x)}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can take the natural logarithm of both sides to get:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\log f(x)=e^{\log f(x)}x\log x\Rightarrow\log\left(f(x)^{-1}\right)e^{\log\left(f(x)^{-1}\right)}=-x\log x$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we will define a new function 
+\begin_inset Formula $g$
+\end_inset
+
+ using an 
+\begin_inset Quotes eld
+\end_inset
+
+inverse definition
+\begin_inset Quotes erd
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g^{-1}(x)\coloneqq xe^{x}\Rightarrow\log\left(f(x)^{-1}\right)=g(-x\log x)\Rightarrow f(x)^{-1}=\exp(g(-x\log x))\Rightarrow f(x)=\exp(g(-x\log x))^{-1}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we now use Lemma 1 we can get:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x)=\frac{g(-x\log x)}{-x\log x}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we now use Lemma 2 we can get:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x)=\sum_{n=1}^{\infty}\frac{(-n)^{n-1}}{n!}\left(-x\log x\right)^{n-1}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So Let's go back to the integral:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{0}^{1}x^{x^{1+x^{1+x^{1+x^{1+x^{\iddots}}}}}}\,dx=\int_{0}^{1}f(x)\,dx=\int_{0}^{1}\sum_{n=1}^{\infty}\frac{(-n)^{n-1}}{n!}\left(-x\log x\right)^{n-1}\,dx=\sum_{n=1}^{\infty}\frac{(-n)^{n-1}}{n!}\int_{0}^{1}\left(-x\log x\right)^{n-1}\,dx=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}(-n)^{n-1}}{n!}\int_{0}^{1}\left(x\log x\right)^{n-1}=\sum_{n=1}^{\infty}\frac{n^{n-1}}{n!}\int_{0}^{1}\left(x\log x\right)^{n-1}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we now use Lemma 3 we can get:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{0}^{1}x^{x^{1+x^{1+x^{1+x^{1+x^{\iddots}}}}}}\,dx=\sum_{n=1}^{\infty}\frac{n^{n-1}}{n!}\left(-\left(\frac{-1}{n}\right)^{n}\Gamma\left(n\right)\right)=-\sum_{n=1}^{\infty}\frac{(-1)^{n}}{n}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So using Lemma 4 we get:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{0}^{1}x^{x^{1+x^{1+x^{1+x^{1+x^{\iddots}}}}}}\,dx=\log2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\backslash
+newtheorem{lemma}{Lemma}
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g^{-1}(x)\coloneqq xe^{x}\Rightarrow\exp(g(x))=\frac{x}{g(x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We know that: 
+\begin_inset Formula $g^{-1}(x)=xe^{x}$
+\end_inset
+
+ so we can substitute 
+\begin_inset Formula $x$
+\end_inset
+
+ with 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ and get:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g^{-1}(g(x))=g(x)e^{g(x)}$
+\end_inset
+
+ therefore, using the definition of an inverse we get:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=g(x)\exp(g(x))$
+\end_inset
+
+ and then, we can devide both sides by 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ to get 
+\begin_inset Formula $\exp(g(x))=\frac{x}{g(x)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g^{-1}(x)\coloneqq xe^{x}\Rightarrow g(x)=\sum_{n=1}^{\infty}\frac{(-n)^{n-1}}{n!}x^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\backslash
+newcommand
+\backslash
+oneq{
+\backslash
+stackrel{
+\backslash
+mathclap{
+\backslash
+normalfont
+\backslash
+mbox{
+\backslash
+tiny{*}}}}{=}}
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We know by definition that: 
+\begin_inset Formula $x=g(x)e^{g(x)}$
+\end_inset
+
+, let's derive both sides:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1=(g(x)+1)e^{g(x)}\frac{dg}{dx}$
+\end_inset
+
+ if we multiply both sides by 
+\begin_inset Formula $g$
+\end_inset
+
+ and use the definition we get:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g\oneq(g+1)x\frac{dg}{dx}\Rightarrow g-x\frac{dg}{dx}=xg\frac{dg}{dx}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+So if we say that 
+\begin_inset Formula $a_{n}\coloneqq\frac{1}{\Gamma(n)}\frac{d^{n}g}{dx^{n}}\mid_{x=0}$
+\end_inset
+
+ then:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(1-n)a_{n}=\sum_{k=1}^{n-1}ka_{k}a_{n-k}=\frac{n}{2}\sum_{k=1}^{n-1}a_{k}a_{n-k}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can now divide both sides by 
+\begin_inset Formula $1-n$
+\end_inset
+
+ and we will get:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{n}=\frac{n}{2-2n}\sum_{k=1}^{n-1}a_{k}a_{n-k}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And we know that 
+\begin_inset Formula $a_{1}=\frac{dg}{dx}\mid_{x=0}\oneq\lim_{x\to0}\frac{g(x)}{xg(x)+x}=\lim_{x\to0}\frac{g(x)}{x}=1$
+\end_inset
+
+ so using Lemma 5 and Taylor's theorem we get that:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g(x)=\sum_{n=1}^{\infty}\frac{(-n)^{n-1}}{n!}x^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{1}\left(x\log x\right)^{n-1}=-\left(\frac{-1}{n}\right)^{n}\Gamma\left(n\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we substitute 
+\begin_inset Formula $x$
+\end_inset
+
+ with 
+\begin_inset Formula $\exp\left(-\frac{x}{n}\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $\int_{0}^{1}\left(x\log x\right)^{n-1}\,dx$
+\end_inset
+
+ we will get:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\int_{\infty}^{0}\left(-\frac{x}{n}\exp\left(-\frac{x}{n}\right)\right)^{n-1}\left(-\frac{1}{n}\exp\left(-\frac{x}{n}\right)\right)\,dx=-\frac{1}{n}\int_{\infty}^{0}\left(-\frac{x}{n}\right)^{n-1}\cdot\exp\left(-x\right)\,dx=-\left(-\frac{1}{n}\right)^{n}\int_{0}^{\infty}x^{n-1}\cdot\exp\left(-x\right)\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So using the definition of the Gamma function we get: 
+\begin_inset Formula $-\left(\frac{-1}{n}\right)^{n}\Gamma(n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\sum_{n=1}^{\infty}\frac{(-x)^{n}}{n}=\log\left|x+1\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We know that 
+\begin_inset Formula $\frac{1}{1-q}=\sum_{n=0}^{\infty}q^{n}$
+\end_inset
+
+ so if we substitute 
+\begin_inset Formula $q$
+\end_inset
+
+ with 
+\begin_inset Formula $-q$
+\end_inset
+
+ we get 
+\begin_inset Formula $\frac{1}{1+q}=\sum_{n=0}^{\infty}(-q)^{n}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's integrate over 
+\begin_inset Formula $q$
+\end_inset
+
+ from 
+\begin_inset Formula $0$
+\end_inset
+
+ to 
+\begin_inset Formula $x$
+\end_inset
+
+ on both side:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\log\left|1+x\right|=\int_{0}^{x}\frac{1}{1+q}\,dq=\int_{0}^{x}\sum_{n=0}^{\infty}(-q)^{n}\,dq=\sum_{n=0}^{\infty}\int_{0}^{x}(-q)^{n}\,dq=\sum_{n=0}^{\infty}\frac{-(-x)^{n+1}}{n+1}=-\sum_{n=1}^{\infty}\frac{(-x)^{n}}{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\backslash
+begin{lemma}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{n}=\begin{cases}
+1 & n=1\\
+\frac{n}{2-2n}\sum_{k=1}^{n-1}a_{k}a_{n-k} & \text{else}
+\end{cases}\Leftrightarrow a_{n}=\frac{(-n)^{n-1}}{n!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lemma}
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's prove that the right-hand side is the same as the left one:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We want to use Cayley's formula
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cayley's formula"
+literal "false"
+
+\end_inset
+
+, which states that the number of distinct trees made by 
+\begin_inset Formula $m$
+\end_inset
+
+ vertices is 
+\begin_inset Formula $m^{m−2}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's take 
+\begin_inset Formula $n$
+\end_inset
+
+ vertices (Let's call them 
+\begin_inset Formula $A$
+\end_inset
+
+) and check in how many ways we can build a 
+\begin_inset Quotes eld
+\end_inset
+
+double tree
+\begin_inset Quotes erd
+\end_inset
+
+ from them:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+First method:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+Choose 
+\begin_inset Formula $k$
+\end_inset
+
+ vertices from 
+\begin_inset Formula $A$
+\end_inset
+
+ (there are 
+\begin_inset Formula $\binom{n}{k}$
+\end_inset
+
+ way to choose those) and call them 
+\begin_inset Formula $B$
+\end_inset
+
+, make a tree with the vertices in 
+\begin_inset Formula $B$
+\end_inset
+
+ (from Cayley's formula there are 
+\begin_inset Formula $k^{k-2}$
+\end_inset
+
+ trees like that) and another one from 
+\begin_inset Formula $A\setminus B$
+\end_inset
+
+ (from Cayley's formula there are 
+\begin_inset Formula $(n-k)^{n-k-2}$
+\end_inset
+
+ trees like that), then from each tree choose a point (there are 
+\begin_inset Formula $k$
+\end_inset
+
+ from the first and 
+\begin_inset Formula $n-k$
+\end_inset
+
+ from the second) and connect them.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Second method:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+Choose a tree with 
+\begin_inset Formula $n$
+\end_inset
+
+ vertices (from Cayley's formula there are 
+\begin_inset Formula $n^{n-2}$
+\end_inset
+
+ trees like that) then choose an edge and remove all its connection except
+ one (there are 
+\begin_inset Formula $n-1$
+\end_inset
+
+ edges) by doing this you divided the tree into two parts (separated by
+ the edge), now each part can be either 
+\begin_inset Formula $B$
+\end_inset
+
+ or 
+\begin_inset Formula $A\setminus B$
+\end_inset
+
+ so we can divide it in 
+\begin_inset Formula $2$
+\end_inset
+
+ ways
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So the first method gives us 
+\begin_inset Formula $\binom{n}{k}\cdot k^{k-2}\cdot(n-k)^{n-k-2}\cdot k\cdot(n-k)$
+\end_inset
+
+ and by summing for each 
+\begin_inset Formula $k$
+\end_inset
+
+ between 
+\begin_inset Formula $1$
+\end_inset
+
+ (So there could be a tree from 
+\begin_inset Formula $B$
+\end_inset
+
+) and 
+\begin_inset Formula $n-1$
+\end_inset
+
+ (So there could be a tree from 
+\begin_inset Formula $A\setminus B$
+\end_inset
+
+) we get 
+\begin_inset Formula $\sum_{k=1}^{n-1}\binom{n}{k}k^{k-2}(n-k)^{n-k-2}k(n-k)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And the second method gives us 
+\begin_inset Formula $n^{n-2}\cdot(n-1)\cdot2$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $2(n-1)n^{n-2}=\sum_{k=1}^{n-1}\binom{n}{k}k^{k-2}(n-k)^{n-k-2}k(n-k)=\sum_{k=1}^{n-1}\binom{n}{k}k^{k-1}(n-k)^{n-k-1}=\sum_{k=1}^{n-1}(-1)^{n-1}n!\frac{(-k)^{k-1}}{k!}\frac{(k-n)^{n-k-1}}{(n-k)!}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's devide both sides by 
+\begin_inset Formula $\frac{(2-2n)\cdot n!\cdot(-1)^{n-1}}{n}$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{(-n)^{n-1}}{n!}=\frac{n}{2-2n}\sum_{k=1}^{n-1}\frac{(-k)^{k-1}}{k!}\frac{(k-n)^{n-k-1}}{(n-k)!}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So the 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ from the right-hand side satisfies the recursive term from the left-hand
+ side, all left to prove if that in the right-hand side 
+\begin_inset Formula $a_{1}=1$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{(-1)^{1-1}}{1!}=\frac{1}{1}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Cayley's formula"
+literal "false"
+
+\end_inset
+
+ Aigner M., Ziegler G.M.
+ (2001) Cayley’s formula for the number of trees.
+ In: Proofs from THE BOOK.
+ Springer, Berlin, Heidelberg.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://doi.org/10.1007/978-3-662-04315-8_24"
+target "https://doi.org/10.1007/978-3-662-04315-8_24"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
